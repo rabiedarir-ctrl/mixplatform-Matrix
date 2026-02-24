@@ -1,0 +1,25 @@
+// وصف ناطق
+{Cname:<Hostname</mixplatform.com>
+<Commit</Add CNAME for custom domain>}
+// تعريف السجلات
+const ARecords = [
+  { type: "A", name: "@", value: "185.199.108.153" },
+  { type: "A", name: "@", value: "185.199.109.153" },
+  { type: "A", name: "@", value: "185.199.110.153" },
+  { type: "A", name: "@", value: "185.199.111.153" },
+];
+
+// دالة لعرض السجلات بشكل منسق
+function displayARecords(records) {
+  console.log("List of A Records:\n");
+  records.forEach((record, index) => {
+    console.log(`Record ${index + 1}:`);
+    console.log(`Type : ${record.type}`);
+    console.log(`Name : ${record.name}`);
+    console.log(`Value: ${record.value}`);
+    console.log("------------------------");
+  });
+}
+
+// تنفيذ الدالة
+displayARecords(ARecords);
