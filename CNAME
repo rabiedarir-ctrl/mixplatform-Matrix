@@ -1,5 +1,6 @@
 // وصف ناطق
-{Cname:<Hostname</mixplatform.com>
+Cname =
+{<Hostname</mixplatform.com>;
 <Commit</Add CNAME for custom domain>}
 // تعريف السجلات
 const ARecords = [
