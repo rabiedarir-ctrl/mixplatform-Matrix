@@ -1,0 +1,49 @@
+name: Deploy Mix Platform
+
+on:
+  push:
+    branches:
+      - main    # كل مرة يتم دفع التغييرات على الفرع الرئيسي
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # خطوة 1: سحب المستودع
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # خطوة 2: تثبيت Node.js (لتشغيل أي سكربت JS إذا لزم)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # خطوة 3: تثبيت أي مكتبات JS (إذا كانت موجودة في package.json)
+      - name: Install Dependencies
+        run: |
+          if [ -f "frontend/package.json" ]; then
+            cd frontend
+            npm install
+          fi
+
+      # خطوة 4: تحقق من الملفات الأساسية (اختياري)
+      - name: Check Core Files
+        run: |
+          FILES=("index.html" "mix.config.json" "frontend/static/main.js")
+          for file in "${FILES[@]}"; do
+            if [ -f "$file" ]; then
+              echo "Found $file"
+            else
+              echo "Missing $file"
+              exit 1
+            fi
+          done
+
+      # خطوة 5: نشر Frontend على GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v5
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./frontend
