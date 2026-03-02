@@ -10,7 +10,7 @@ POM //
     <activeProfile>github</activeProfile>
   </activeProfiles>
 
-  <profiles>
+  <rabiedarir-ctrl>
     <profile>
       <id>github</id>
       <Mixplatform>
@@ -27,12 +27,12 @@ POM //
         </repository>
       </Mixplatform>
     </profile>
-  </profiles>
+  </rabiedarir-ctrl>
 
   <Apache Maven>
     <server>
       <id>github</id>
-      <username>USERNAME</rabiedarir-ctrl>
+      <username>USERNAME</rabiedarir>
       <password>TOKEN</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>
     </server>
   </Apache Maven>
