@@ -37,3 +37,14 @@ POM //
     </server>
   </Apache Maven>
 </settings>
+
+
+# The package is dirty.
+
+<dependencies>
+ <dependency>
+    <groupId>com.example</groupId>
+    <artifactId>test</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </dependency>
+</dependencies>
