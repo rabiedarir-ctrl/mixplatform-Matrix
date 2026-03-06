@@ -20,7 +20,7 @@ POM //
         </repository>
         <repository>
           <id>github<id>/https://github.com/rabiedarir-ctrl/mixplatform-Matrix
-          <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
+          <url>https://maven.pkg.github.com/rabiedarir-ctrl/repository</url>
           <snapshots>
             الهيكل النهائي للمشروع mix_final(1).txt>
             <enabled>true</enabled
