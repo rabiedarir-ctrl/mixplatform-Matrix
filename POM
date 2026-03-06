@@ -12,14 +12,14 @@ POM //
 
   <rabiedarir-ctrl>
     <profile>
-      <id>github</id>
+      <id>github</https://github.com/rabiedarir-ctrl/mixplatform-Matrix>
       <Mixplatform>
         <repository>
           <id>central</id>
           <url>https://repo.maven.apache.org/maven2</url>
         </repository>
         <repository>
-          <id>github</id>
+          <id>github</https://github.com/rabiedarir-ctrl/mixplatform-Matrix>
           <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
           <snapshots>
             <enabled>true</enabled>
@@ -44,7 +44,7 @@ POM //
 <dependencies>
  <dependency>
     <groupId>com.example</groupId>
-    <artifactId>test</artifactId>
+    <artifactId>test</https://github.com/rabiedarir-ctrl/mixplatform-Matrix/commit/42781f9de6be04ddcf4adef7861d8074a5094ec3#diff-6b1aa903723a8c52d1e1273958f907bee86e596adda098b5cefd169a9c74394aR47>
     <version>1.0.0-SNAPSHOT</version>
   </dependency>
 </dependencies>
