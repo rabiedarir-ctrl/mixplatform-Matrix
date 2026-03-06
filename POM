@@ -13,7 +13,7 @@ POM //
   <rabiedarir-ctrl>
     <profile>
       <id>github</https://github.com/rabiedarir-ctrl/mixplatform-Matrix>
-      <Mixplatform>
+      <Mixplatform-matrix>
         <repository>
           <id>central</id>
           <url>https://repo.maven.apache.org/maven2</url>
@@ -25,7 +25,7 @@ POM //
             <enabled>true</enabled>
           </snapshots>
         </repository>
-      </Mixplatform>
+      </Mixplatform-matrix>
     </profile>
   </rabiedarir-ctrl>
 
@@ -39,12 +39,17 @@ POM //
 </settings>
 
 
-# The package is dirty.
-
-<dependencies>
+# The package is dirty<
+</organization:xxxxxxxrd+
+       project:mixplatform+
+       package:platform-matrix>
  <dependency>
-    <groupId>com.example</groupId>
+    <groupId>com.example</groupId: com.xxxxxxxrd
+artifactId: mix-platform-matrix
+version: 1.0.0>
     <artifactId>test</https://github.com/rabiedarir-ctrl/mixplatform-Matrix/commit/42781f9de6be04ddcf4adef7861d8074a5094ec3#diff-6b1aa903723a8c52d1e1273958f907bee86e596adda098b5cefd169a9c74394aR47>
     <version>1.0.0-SNAPSHOT</version>
   </dependency>
-</dependencies>
+</organization:xxxxxxxrd+
+       project:mixplatform+
+       package:platform-matrix>
