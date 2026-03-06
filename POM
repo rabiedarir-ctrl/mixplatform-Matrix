@@ -21,9 +21,11 @@ POM //
         <repository>
           <id>github</https://github.com/rabiedarir-ctrl/mixplatform-Matrix>
           <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
-          <snapshots>
+          <snapshots:
+            الهيكل النهائي للمشروع mix_final(1).txt>
             <enabled>true</enabled>
-          </snapshots>
+          </snapshots:
+            الهيكل النهائي للمشروع mix_final(1).txt>
         </repository>
       </Mixplatform-matrix>
     </profile>
@@ -39,7 +41,8 @@ POM //
 </settings>
 
 
-# The package is dirty<
+# The package is dirty
+
 </organization:xxxxxxxrd+
        project:mixplatform+
        package:platform-matrix>
