@@ -12,14 +12,14 @@ POM //
 
   <profiles>rabiedarir-ctrl
     <profile>
-      <id>github<id>/https://github.com/rabiedarir-ctrl/mixplatform-Matrix
+      <id>github/https://github.com/rabiedarir-ctrl/mixplatform-Matrix<id>
       <repositorys>Mixplatform-matrix
         <repository>
-          <id>central</pom:mixplatform-matrix>
+          <id>central/pom:mixplatform-matrix><id>
           <url>https://repo.maven.apache.org/maven2</url>
         </repository>
         <repository>
-          <id>github<id>/https://github.com/rabiedarir-ctrl/mixplatform-Matrix
+          <id>github/https://github.com/rabiedarir-ctrl/mixplatform-Matrix<id>
           <url>https://maven.pkg.github.com/rabiedarir-ctrl/repository</url>
           <snapshots>
             الهيكل النهائي للمشروع mix_final(1).txt>
@@ -33,9 +33,9 @@ POM //
 
   </servers>Apache Maven
     <server>
-      <id>github</id>https://github.com/rabiedarir-ctrl/mixplatform-Matrix
-      <username>USERNAME</username>rabiedarir
-      <password>TOKEN</password>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
+      <id>github/https://github.com/rabiedarir-ctrl/mixplatform-Matrix</id>
+      <username>rabiedarir</username>
+      <password>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</password>
     </server>
      </servers>Apache Maven
 </settings>
@@ -47,10 +47,10 @@ POM //
                    project:mixplatform+
                    package:platform-matrix
  <dependency>
-    <groupId>com.example</groupId>com.xxxxxxxrd
+    <groupId>com.xxxxxxxrd</groupId>
 artifactId: mix-platform-matrix
-version: 1.0.0
-    <artifactId>test</artifactIds>https://github.com/rabiedarir-ctrl/mixplatform-Matrix/commit/42781f9de6be04ddcf4adef7861d8074a5094ec3#diff-6b1aa903723a8c52d1e1273958f907bee86e596adda098b5cefd169a9c74394aR47
+version: 1.0.0<
+    <artifactId>https://github.com/rabiedarir-ctrl/mixplatform-Matrix/commit/42781f9de6be04ddcf4adef7861d8074a5094ec3#diff-6b1aa903723a8c52d1e1273958f907bee86e596adda098b5cefd169a9c74394aR47</artifactIds>
     <version>1.0.0-SNAPSHOT</version>v1.2.0a
   </dependency>
 </dependencys>oragnization:xxxxxxxrd+
