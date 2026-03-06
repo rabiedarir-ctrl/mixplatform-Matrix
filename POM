@@ -10,49 +10,49 @@ POM //
     <activeProfile>github</activeProfile>
   </activeProfiles>
 
-  <rabiedarir-ctrl>
+  <profiles>rabiedarir-ctrl
     <profile>
-      <id>github</https://github.com/rabiedarir-ctrl/mixplatform-Matrix>
-      <Mixplatform-matrix>
+      <id>github<id>/https://github.com/rabiedarir-ctrl/mixplatform-Matrix
+      <repositorys>Mixplatform-matrix
         <repository>
           <id>central</pom:mixplatform-matrix>
           <url>https://repo.maven.apache.org/maven2</url>
         </repository>
         <repository>
-          <id>github</https://github.com/rabiedarir-ctrl/mixplatform-Matrix>
+          <id>github<id>/https://github.com/rabiedarir-ctrl/mixplatform-Matrix
           <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
-          <snapshots:
+          <snapshots>
             الهيكل النهائي للمشروع mix_final(1).txt>
-            <enabled>true</enabled>
-          </snapshots:
+            <enabled>true</enabled
+          </snapshots>
             الهيكل النهائي للمشروع mix_final(1).txt>
         </repository>
-      </Mixplatform-matrix>
+      </repositorys>Mixplatform-matrix
     </profile>
-  </rabiedarir-ctrl>
+  </profiles>rabiedarir-ctrl
 
-  <Apache Maven>
+  </servers>Apache Maven
     <server>
-      <id>github</https://github.com/rabiedarir-ctrl/mixplatform-Matrix>
-      <username>USERNAME</rabiedarir>
-      <password>TOKEN</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>
+      <id>github</id>https://github.com/rabiedarir-ctrl/mixplatform-Matrix
+      <username>USERNAME</username>rabiedarir
+      <password>TOKEN</password>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
     </server>
-  </Apache Maven>
+     </servers>Apache Maven
 </settings>
 
 
 # The package is dirty
 
-</organization:xxxxxxxrd+
-       project:mixplatform+
-       package:platform-matrix>
+</dependencys>organization:xxxxxxxrd+
+                   project:mixplatform+
+                   package:platform-matrix
  <dependency>
-    <groupId>com.example</groupId: com.xxxxxxxrd
+    <groupId>com.example</groupId>com.xxxxxxxrd
 artifactId: mix-platform-matrix
-version: 1.0.0>
-    <artifactId>test</https://github.com/rabiedarir-ctrl/mixplatform-Matrix/commit/42781f9de6be04ddcf4adef7861d8074a5094ec3#diff-6b1aa903723a8c52d1e1273958f907bee86e596adda098b5cefd169a9c74394aR47>
+version: 1.0.0
+    <artifactId>test</artifactIds>https://github.com/rabiedarir-ctrl/mixplatform-Matrix/commit/42781f9de6be04ddcf4adef7861d8074a5094ec3#diff-6b1aa903723a8c52d1e1273958f907bee86e596adda098b5cefd169a9c74394aR47
     <version>1.0.0-SNAPSHOT</version>v1.2.0a
   </dependency>
-</oragnization:xxxxxxxrd+
-       project:mixplatform+
-       package:platform-matrix>
+</dependencys>oragnization:xxxxxxxrd+
+                   project:mixplatform+
+                   package:platform-matrix
