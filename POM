@@ -15,7 +15,7 @@ POM //
       <id>github</https://github.com/rabiedarir-ctrl/mixplatform-Matrix>
       <Mixplatform-matrix>
         <repository>
-          <id>central</id>
+          <id>central</pom:mixplatform-matrix>
           <url>https://repo.maven.apache.org/maven2</url>
         </repository>
         <repository>
