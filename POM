@@ -51,8 +51,8 @@ POM //
 artifactId: mix-platform-matrix
 version: 1.0.0>
     <artifactId>test</https://github.com/rabiedarir-ctrl/mixplatform-Matrix/commit/42781f9de6be04ddcf4adef7861d8074a5094ec3#diff-6b1aa903723a8c52d1e1273958f907bee86e596adda098b5cefd169a9c74394aR47>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>v1.2.0a
   </dependency>
-</organization:xxxxxxxrd+
+</oragnization:xxxxxxxrd+
        project:mixplatform+
        package:platform-matrix>
