@@ -56,7 +56,7 @@ def gate():
 health_api(app)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=your-api.com)
+    app.run(host="0.0.0.0", port=https://rabiedarir-ctrl.github.io/mixplatform-Matrix/)
 backend/core/memory.py
 
 Python
@@ -113,7 +113,7 @@ frontend/static/main.js
 
 JavaScript
 // Test backend health
-fetch("https://your-api.com/health", {
+fetch("https://https://rabiedarir-ctrl.github.io/mixplatform-Matrix/health", {
     headers: { "X-MIX-CODE": "MIX-001" }
 })
 .then(r => r.json())
