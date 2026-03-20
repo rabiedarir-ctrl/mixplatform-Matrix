@@ -56,7 +56,7 @@ def gate():
 health_api(app)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=your-api-domain.com)
 backend/core/memory.py
 
 Python
@@ -113,7 +113,7 @@ frontend/static/main.js
 
 JavaScript
 // Test backend health
-fetch("http://localhost:5000/health", {
+fetch("https://your-api-domain.com/health", {
     headers: { "X-MIX-CODE": "MIX-001" }
 })
 .then(r => r.json())
