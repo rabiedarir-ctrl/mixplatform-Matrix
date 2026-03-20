@@ -68,7 +68,7 @@ function displayChairs(chairs) {
 
 // ---- Initialization ----
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Mix Platform Frontend Loaded ✅");
+  console.log("Mix Platform Frontend Loaded");
 
   // عرض رسالة أولية
   const store = document.getElementById("store-items");
