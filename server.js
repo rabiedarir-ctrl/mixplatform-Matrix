@@ -1,24 +1,24 @@
 'use strict';
 
-// ==== Dependencies ====
+# Dependencies
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 
-// ==== Initialize App ====
+# Initialize App
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ==== Middleware ====
+# Middleware
 app.use(cors());
 app.use(express.json());
 
-// ==== Paths ====
+# Paths 
 const storageDir = path.join(__dirname, 'storage');
 const dataPath = path.join(storageDir, 'data.json');
 
-// ==== Ensure storage exists ====
+# Ensure storage exists 
 if (!fs.existsSync(storageDir)) {
     fs.mkdirSync(storageDir);
 }
@@ -34,7 +34,7 @@ if (!fs.existsSync(dataPath)) {
     }, null, 2));
 }
 
-// ==== Helper Functions ====
+# Helper Functions 
 function readData() {
     try {
         return JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
@@ -58,20 +58,19 @@ function writeData(data) {
         console.error("Write Error:", error);
     }
 }
-
-// ==== Generate Unique ID ====
+# Generate Unique ID
 function generateId() {
     return Date.now();
 }
 
-// ==== API Routes ====
+# API Routes 
 
-// --- Health ---
+# Health 
 app.get('/health', (req, res) => {
     res.json({ status: "Mix Platform Alive"});
 });
 
-// --- Generic Helper ---
+# Generic Helper 
 function createPostHandler(key) {
     return (req, res) => {
         const data = readData();
@@ -89,7 +88,7 @@ function createGetHandler(key) {
     };
 }
 
-// --- Routes ---
+# Routes 
 app.get('/api/social', createGetHandler('social'));
 app.post('/api/social', createPostHandler('social'));
 
@@ -108,13 +107,13 @@ app.post('/api/metaverse', createPostHandler('metaverse'));
 app.get('/api/matrix', createGetHandler('matrix'));
 app.post('/api/matrix', createPostHandler('matrix'));
 
-// ==== Error Handling ====
+# Error Handling
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ error: "Internal Server Error" });
 });
 
-// ==== Start Server ====
+# Start Server 
 app.listen(PORT, () => {
     console.log(Mix Platform API running on http://localhost:${PORT}`);
 });
