@@ -1,6 +1,6 @@
 from flask import request, abort
 
-# ==== Mix Entry Code Auth ====
+# Mix Entry Code Auth
 def check_entry(expected_code):
     """
     تحقق من صحة رمز الدخول للمنصة قبل أي طلب.
@@ -17,7 +17,7 @@ def check_entry(expected_code):
     return True
 
 
-# ==== Role & Permissions (اختياري) ====
+# Role & Permissions (اختياري) 
 def check_role(user_role, allowed_roles):
     """
     تحقق من صلاحيات المستخدم
