@@ -56,7 +56,7 @@ def gate():
 health_api(app)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=http://localhost:3000/health)
 backend/core/memory.py
 
 Python
@@ -113,7 +113,7 @@ frontend/static/main.js
 
 JavaScript
 // Test backend health
-fetch("http://localhost:5000/health", {
+fetch("http://localhost:3000/health", {
     headers: { "X-MIX-CODE": "MIX-001" }
 })
 .then(r => r.json())
@@ -170,8 +170,4 @@ fi
 cd ..
 echo "Mix structure check 
 completed."
-{
-ORCID: https://orcid.org/0009-0004-2673-9396
 
-Researcher ID (ORCID):0009-0004-2673-9396
-}

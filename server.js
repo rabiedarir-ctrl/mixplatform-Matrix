@@ -3,7 +3,6 @@
 // ==== Dependencies ====
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 
@@ -13,11 +12,17 @@ const PORT = process.env.PORT || 3000;
 
 // ==== Middleware ====
 app.use(cors());
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'frontend')));
+app.use(express.json());
 
-// ==== Data Storage (JSON files) ====
-const dataPath = path.join(__dirname, 'storage', 'data.json');
+// ==== Paths ====
+const storageDir = path.join(__dirname, 'storage');
+const dataPath = path.join(storageDir, 'data.json');
+
+// ==== Ensure storage exists ====
+if (!fs.existsSync(storageDir)) {
+    fs.mkdirSync(storageDir);
+}
+
 if (!fs.existsSync(dataPath)) {
     fs.writeFileSync(dataPath, JSON.stringify({
         social: [],
@@ -31,99 +36,85 @@ if (!fs.existsSync(dataPath)) {
 
 // ==== Helper Functions ====
 function readData() {
-    return JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+    try {
+        return JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+    } catch (error) {
+        console.error("Read Error:", error);
+        return {
+            social: [],
+            store: [],
+            wallet: [],
+            games: [],
+            metaverse: [],
+            matrix: []
+        };
+    }
 }
 
 function writeData(data) {
-    fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
+    try {
+        fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
+    } catch (error) {
+        console.error("Write Error:", error);
+    }
+}
+
+// ==== Generate Unique ID ====
+function generateId() {
+    return Date.now();
 }
 
 // ==== API Routes ====
 
-// --- Health Check ---
+// --- Health ---
 app.get('/health', (req, res) => {
-    res.json({ status: "Mix Platform Alive" });
+    res.json({ status: "Mix Platform Alive"});
 });
 
-// --- Social Feed ---
-app.get('/api/social', (req, res) => {
-    const data = readData();
-    res.json(data.social);
-});
-app.post('/api/social', (req, res) => {
-    const data = readData();
-    const newPost = { id: data.social.length + 1, ...req.body };
-    data.social.push(newPost);
-    writeData(data);
-    res.status(201).json(newPost);
-});
+// --- Generic Helper ---
+function createPostHandler(key) {
+    return (req, res) => {
+        const data = readData();
+        const newItem = { id: generateId(), ...req.body };
+        data[key].push(newItem);
+        writeData(data);
+        res.status(201).json(newItem);
+    };
+}
 
-// --- Store Items ---
-app.get('/api/store', (req, res) => {
-    const data = readData();
-    res.json(data.store);
-});
-app.post('/api/store', (req, res) => {
-    const data = readData();
-    const newItem = { id: data.store.length + 1, ...req.body };
-    data.store.push(newItem);
-    writeData(data);
-    res.status(201).json(newItem);
-});
+function createGetHandler(key) {
+    return (req, res) => {
+        const data = readData();
+        res.json(data[key]);
+    };
+}
 
-// --- Wallet Management ---
-app.get('/api/wallet', (req, res) => {
-    const data = readData();
-    res.json(data.wallet);
-});
-app.post('/api/wallet', (req, res) => {
-    const data = readData();
-    const newTransaction = { id: data.wallet.length + 1, ...req.body };
-    data.wallet.push(newTransaction);
-    writeData(data);
-    res.status(201).json(newTransaction);
-});
+// --- Routes ---
+app.get('/api/social', createGetHandler('social'));
+app.post('/api/social', createPostHandler('social'));
 
-// --- Games ====
-app.get('/api/games', (req, res) => {
-    const data = readData();
-    res.json(data.games);
-});
-app.post('/api/games', (req, res) => {
-    const data = readData();
-    const newGame = { id: data.games.length + 1, ...req.body };
-    data.games.push(newGame);
-    writeData(data);
-    res.status(201).json(newGame);
-});
+app.get('/api/store', createGetHandler('store'));
+app.post('/api/store', createPostHandler('store'));
 
-// --- Metaverse ====
-app.get('/api/metaverse', (req, res) => {
-    const data = readData();
-    res.json(data.metaverse);
-});
-app.post('/api/metaverse', (req, res) => {
-    const data = readData();
-    const newWorld = { id: data.metaverse.length + 1, ...req.body };
-    data.metaverse.push(newWorld);
-    writeData(data);
-    res.status(201).json(newWorld);
-});
+app.get('/api/wallet', createGetHandler('wallet'));
+app.post('/api/wallet', createPostHandler('wallet'));
 
-// --- Matrix Chat ====
-app.get('/api/matrix', (req, res) => {
-    const data = readData();
-    res.json(data.matrix);
-});
-app.post('/api/matrix', (req, res) => {
-    const data = readData();
-    const newMessage = { id: data.matrix.length + 1, ...req.body };
-    data.matrix.push(newMessage);
-    writeData(data);
-    res.status(201).json(newMessage);
+app.get('/api/games', createGetHandler('games'));
+app.post('/api/games', createPostHandler('games'));
+
+app.get('/api/metaverse', createGetHandler('metaverse'));
+app.post('/api/metaverse', createPostHandler('metaverse'));
+
+app.get('/api/matrix', createGetHandler('matrix'));
+app.post('/api/matrix', createPostHandler('matrix'));
+
+// ==== Error Handling ====
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ error: "Internal Server Error" });
 });
 
 // ==== Start Server ====
 app.listen(PORT, () => {
-    console.log(` Mix Platform backend is running on port ${PORT}`);
+    console.log(Mix Platform API running on http://localhost:${PORT}`);
 });

@@ -7,33 +7,46 @@ POM //
                       http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
   <activeProfiles>
-    <activeProfile>github</activeProfile>
+    <activeProfile>github<rabiedarir-ctrl/activeProfile>
   </activeProfiles>
 
-  <rabiedarir-ctrl>
+  <profiles>rabiedarir-ctrl
     <profile>
-      <id>github</id>
-      <Mixplatform>
-        <repository>
-          <id>central</id>
+      <id>github/https://github.com/rabiedarir-ctrl/mixplatform-Matrix<id>
+      <Mixplatform-matrix/repositorys>
+        <www mix-rd.org/repository>
+          <id>central/pom:mixplatform-matrix><id>
           <url>https://repo.maven.apache.org/maven2</url>
-        </repository>
-        <repository>
-          <id>github</id>
-          <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
+        <Mixplatform-matrix/repository>
+        <www.mix-rd.org/repository>
+          <id>github/https://github.com/rabiedarir-ctrl/mixplatform-Matrix<id>
+          <url>https://maven.pkg.github.com/rabiedarir-ctrl/repository</url>
           <snapshots>
             <enabled>true</enabled>
-          </snapshots>
-        </repository>
-      </Mixplatform>
-    </profile>
-  </rabiedarir-ctrl>
+            الهيكل النهائي للمشروع mix_final(1).txt>/snapshots
+        <www mix-rd.org/repository>
+      <Mixplatform-matrix/repositorys>
+    <rabiedarir-ctrl/profile>
+  </profiles>
 
-  <Apache Maven>
+  <Apache Maven/servers>
     <server>
-      <id>github</id>
-      <username>USERNAME</rabiedarir>
-      <password>TOKEN</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>
-    </server>
-  </Apache Maven>
+      <id>github/https://github.com/rabiedarir-ctrl/mixplatform-Matrix</id>
+      <username>rabiedarir</username>
+      <password>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</password>
+    <Apache Maven/server>
+     </servers>
 </settings>
+
+
+# The package is dirty
+
+<organization:xxxxxxxrd+project:mixplatform+package:platform-matrix/dependencys>
+ <dependency>
+    <groupId>com.xxxxxxxrd</groupId>
+artifactId: mix-platform-matrix
+version: 1.0.0<
+    <artifactId>https://github.com/rabiedarir-ctrl/mixplatform-Matrix/commit/42781f9de6be04ddcf4adef7861d8074a5094ec3#diff-6b1aa903723a8c52d1e1273958f907bee86e596adda098b5cefd169a9c74394aR47</artifactIds>
+    <version>v1.0.0-SNAPSHOT:الهيكل النهائي للمشروع mix_final(1).txt<v1.2.0a/version>
+  <oragnization:xxxxxxxrd+project:mixplatform+package:platform-matrix/dependency>
+</dependencys>
