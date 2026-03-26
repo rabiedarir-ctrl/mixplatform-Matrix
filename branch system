@@ -1,4 +1,4 @@
-1️⃣#اضافة ملفات جديد
+#اضافة ملفات جديد
 []
 git add .
 git commit -m "feat(metaverse): add core system"
