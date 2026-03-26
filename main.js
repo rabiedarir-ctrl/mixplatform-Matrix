@@ -1,12 +1,12 @@
-// ========================================
-// Mix Platform - Frontend Main JS (Fixed)
-// ========================================
 
-// ---- Configuration ----
+// Mix Platform - Frontend Main JS (Fixed)
+
+
+// Configuration 
 const MIX_API_BASE = ""; // اتركه فارغ مؤقتًا (لا تستعمل localhost)
 const ENTRY_CODE = "MIX-001";
 
-// ---- Fetch Health (اختياري) ----
+// Fetch Health (اختياري) 
 async function fetchHealth() {
   if (!MIX_API_BASE) return;
 
@@ -21,7 +21,7 @@ async function fetchHealth() {
   }
 }
 
-// ---- Fetch Chairs (اختياري) ----
+// Fetch Chairs (اختياري) 
 async function fetchChairs() {
   if (!MIX_API_BASE) {
     // بيانات تجريبية بدل API
@@ -44,7 +44,7 @@ async function fetchChairs() {
   }
 }
 
-// ---- Display Chairs ----
+// Display Chairs 
 function displayChairs(chairs) {
   const container = document.getElementById("store-items");
 
@@ -66,7 +66,7 @@ function displayChairs(chairs) {
   });
 }
 
-// ---- Initialization ----
+// Initialization 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Mix Platform Frontend Loaded");
 
