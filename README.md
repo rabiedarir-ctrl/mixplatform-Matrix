@@ -170,8 +170,4 @@ fi
 cd ..
 echo "Mix structure check 
 completed."
-{
-ORCID: https://orcid.org/0009-0004-2673-9396
 
-Researcher ID (ORCID):0009-0004-2673-9396
-}
