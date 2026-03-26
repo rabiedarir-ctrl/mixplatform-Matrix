@@ -1,4 +1,5 @@
 from flask import jsonify
+import logging
 
 # ==== Health Check API ====
 def health_api(app):
@@ -25,4 +26,5 @@ def health_api(app):
             }
             return jsonify(response), 200
         except Exception as e:
-            return jsonify({"status": "error", "message": str(e)}), 500
+            logging.exception(e)
+            return jsonify({"status": "error", "message": "Internal server error"}), 500
