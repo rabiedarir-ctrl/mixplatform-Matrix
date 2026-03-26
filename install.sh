@@ -1,11 +1,8 @@
 #!/bin/bash
-
-###############################################
 # Mix Platform - Automated Installation
 # Version: 1.0.0
 # Author: rabiedarir-ctrl
 # Description: Complete setup and installation
-###############################################
 
 set -e
 
