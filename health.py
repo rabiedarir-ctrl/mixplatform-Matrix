@@ -1,7 +1,7 @@
 from flask import jsonify
 import logging
 
-# ==== Health Check API ====
+# Health Check API 
 def health_api(app):
     """
     إضافة endpoint لفحص حالة Mix Platform
