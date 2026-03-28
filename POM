@@ -33,7 +33,7 @@ POM //
     <server>
       <id>github/https://github.com/rabiedarir-ctrl/mixplatform-Matrix</id>
       <username>rabiedarir</username>
-      <password>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</password>
+      <password>token</password>
     <Apache Maven/server>
      </servers>
 </settings>
