@@ -60,7 +60,11 @@
   <p>© منصة ميكس 2026</p>
 </footer>
 
-<script src="static/main.js"><fetch("storage/social.json")/script>
+<script src="static/main.js"><fetch(fetch("storage/social.json")
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+  });/script>
 
 </body>
 </html>
