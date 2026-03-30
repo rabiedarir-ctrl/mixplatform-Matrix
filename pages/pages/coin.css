@@ -1,0 +1,123 @@
+/* pages/coin.css */
+
+/* الحاوية الرئيسية */
+.coin-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  color: #fff;
+}
+
+/* العنوان */
+.coin-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f0b90b;
+}
+
+/* بطاقة العملة */
+.coin-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* اسم العملة */
+.coin-name {
+  font-size: 22px;
+  color: #f0b90b;
+}
+
+/* السعر */
+.coin-price {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+/* التغير */
+.coin-change {
+  font-size: 16px;
+}
+
+.coin-up {
+  color: #0f0;
+}
+
+.coin-down {
+  color: #f00;
+}
+
+/* جدول العملات */
+.coin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* رأس الجدول */
+.coin-table th {
+  background: #1a1a1a;
+  padding: 10px;
+  text-align: left;
+  color: #f0b90b;
+}
+
+/* صفوف */
+.coin-table td {
+  padding: 10px;
+  border-bottom: 1px solid #222;
+}
+
+/* hover */
+.coin-table tr:hover {
+  background: #111;
+}
+
+/* محفظة المستخدم */
+.wallet {
+  margin-top: 20px;
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* رصيد */
+.wallet-balance {
+  font-size: 20px;
+  color: #0f0;
+}
+
+/* أزرار */
+.coin-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.coin-actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #f0b90b;
+  color: #000;
+  cursor: pointer;
+}
+
+.coin-actions button:hover {
+  background: #d9a509;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .coin-price {
+    font-size: 22px;
+  }
+
+  .coin-actions {
+    flex-direction: column;
+  }
+  }
