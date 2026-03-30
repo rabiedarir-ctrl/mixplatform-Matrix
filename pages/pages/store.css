@@ -1,0 +1,114 @@
+/* Store - Mix Platform */
+
+.store-container {
+  padding: 20px;
+  color: white;
+}
+
+/* العنوان */
+.store-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* شريط البحث */
+.store-search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.store-search input {
+  width: 60%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* شبكة المنتجات */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* بطاقة المنتج */
+.product-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  background: #222;
+}
+
+/* صورة المنتج */
+.product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* تفاصيل المنتج */
+.product-info {
+  padding: 10px;
+}
+
+.product-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  color: #0f0;
+  font-weight: bold;
+}
+
+/* زر الشراء */
+.buy-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #0f0;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: #0c0;
+}
+
+/* سلة المشتريات */
+.cart-container {
+  margin-top: 30px;
+  padding: 15px;
+  background: #111;
+  border-radius: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cart-total {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #0f0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .store-search input {
+    width: 90%;
+  }
+}
