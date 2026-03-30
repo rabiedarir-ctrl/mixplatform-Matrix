@@ -1,5 +1,9 @@
 // pages/dashboard.js
 
+const link = document.createElement("link");
+link.rel = "stylesheet";
+link.href = "./pages/dashboard.css";
+document.head.appendChild(link);
 import { apiFetch } from "../config/api.js";
 
 // تحميل مكتبة Chart.js
