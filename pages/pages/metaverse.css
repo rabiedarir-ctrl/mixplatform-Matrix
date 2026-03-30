@@ -1,0 +1,80 @@
+/* pages/metaverse.css */
+
+/* الحاوية الرئيسية */
+.metaverse-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  color: #fff;
+  background: linear-gradient(180deg, #0a0a0a, #111);
+  min-height: 100vh;
+}
+
+/* عنوان الصفحة */
+.metaverse-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0f0;
+  font-size: 28px;
+  text-shadow: 0 0 10px #0f0;
+}
+
+/* مساحة المتافيرس */
+.metaverse-space {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  perspective: 1200px; /* لتأثير 3D */
+}
+
+/* عناصر المتافيرس */
+.metaverse-card {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid #0f0;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.5s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+/* تأثير hover ثلاثي الأبعاد */
+.metaverse-card:hover {
+  transform: rotateY(15deg) rotateX(10deg) translateZ(10px);
+  box-shadow: 0 10px 25px rgba(0, 255, 0, 0.5);
+}
+
+/* صورة أو نموذج داخل البطاقة */
+.metaverse-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* اسم العنصر */
+.metaverse-card h3 {
+  margin-bottom: 5px;
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+}
+
+/* وصف العنصر */
+.metaverse-card p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .metaverse-space {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .metaverse-card {
+    transform: none;
+  }
+}
