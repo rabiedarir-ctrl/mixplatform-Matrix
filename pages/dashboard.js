@@ -15,9 +15,9 @@ export function loadDashboard(app) {
     <h2>لوحة التحكم - Mix</h2>
 
     <div class="stats-container">
-      <div class="stat-card" id="users">⏳</div>
-      <div class="stat-card" id="posts">⏳</div>
-      <div class="stat-card" id="comments">⏳</div>
+      <div class="stat-card" id="users"></div>
+      <div class="stat-card" id="posts"></div>
+      <div class="stat-card" id="comments"></div>
     </div>
 
     <canvas id="statsChart"></canvas>
