@@ -1,5 +1,10 @@
 // pages/home.js
 
+const link = document.createElement("link");
+link.rel = "stylesheet";
+link.href = "./pages/home.css";
+document.head.appendChild(link);
+
 import { apiFetch } from "../config/api.js";
 
 export function loadHome(app) {
