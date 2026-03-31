@@ -1,4 +1,4 @@
-// 📂 pages/bitcoin.js
+// pages/bitcoin.js
 
 const link = document.createElement("link");
 link.rel = "stylesheet";
@@ -16,7 +16,7 @@ export function loadBitcoin(app) {
 
     <div class="btc-balance">
       <h3>الرصيد الحالي</h3>
-      <p id="btc-balance">⏳ جاري التحميل...</p>
+      <p id="btc-balance">جاري التحميل...</p>
     </div>
 
     <div class="btc-transaction">
@@ -28,7 +28,7 @@ export function loadBitcoin(app) {
 
     <div class="btc-history">
       <h3>سجل المعاملات</h3>
-      <div id="btc-history-list">⏳ جاري التحميل...</div>
+      <div id="btc-history-list">جاري التحميل...</div>
     </div>
   `;
 
@@ -54,7 +54,7 @@ export function loadBitcoin(app) {
       loadHistory();
     } catch (err) {
       console.error(err);
-      alert("❌ خطأ في إرسال البيتكوين");
+      alert("خطأ في إرسال البيتكوين");
     }
   });
 }
@@ -67,7 +67,7 @@ async function loadBalance() {
     balanceEl.textContent = data.balance + " BTC";
   } catch (err) {
     console.error(err);
-    balanceEl.textContent = "❌ خطأ في التحميل";
+    balanceEl.textContent = "خطأ في التحميل";
   }
 }
 
@@ -89,6 +89,6 @@ async function loadHistory() {
     `).join("");
   } catch (err) {
     console.error(err);
-    historyEl.textContent = "❌ خطأ في التحميل";
+    historyEl.textContent = "خطأ في التحميل";
   }
 }
