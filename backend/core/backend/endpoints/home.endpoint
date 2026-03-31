@@ -1,4 +1,4 @@
-// backend/endpoints/home.endpoint.js
+// config/home.endpoint.js
 
 import express from "express";
 import { getStats } from "../core/stats.js";
