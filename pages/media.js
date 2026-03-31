@@ -9,12 +9,12 @@ import { apiFetch } from "../config/api.js";
 <div class="media-container">
   <h2>قناة Mix</h2>
 
+  // The class
   <div class="radio-player">
     <button>تشغيل</button>
     <p>الراديو المباشر</p>
   </div>
-
-  <div class="tv-channels">
+<div class="tv-channels">
     <div class="channel-card">
       <h3>Mix TV 1</h3>
       <p>الوصف</p>
@@ -25,7 +25,9 @@ import { apiFetch } from "../config/api.js";
     </div>
   </div>
 </div>
+
 export function loadMedia(app) {
+  
   // الحاوية الرئيسية
   const container = document.createElement("div");
   container.className = "media-container";
