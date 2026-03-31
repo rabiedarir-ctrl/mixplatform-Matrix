@@ -7,6 +7,17 @@ document.head.appendChild(link);
 
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js";
 
+// The class
+<div class="metaverse-container">
+  <div class="metaverse-space">
+    <div class="metaverse-card">
+      <img src="avatar.png" alt="Avatar">
+      <h3>Avatar Name</h3>
+      <p>Description</p>
+    </div>
+  </div>
+</div>
+
 // دالة تحميل المتافيرس
 export function loadMetaverse(app) {
 
