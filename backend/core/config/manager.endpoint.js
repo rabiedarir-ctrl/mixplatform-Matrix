@@ -1,6 +1,6 @@
 // config/manager.endpoint.js
 
-const MANAGER_API_BASE = "https://api.mix-rd.com/manager";
+const MANAGER_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/manager";
 
 /**
  * تنفيذ طلب API للـ Manager
@@ -29,9 +29,7 @@ export async function managerApiFetch(endpoint, options = {}) {
   }
 }
 
-/* ----------------------
-   وظائف رئيسية للـ Manager
-------------------------*/
+/* ---وظائف رئيسية للـ Manager---*/
 
 /**
  * جلب إحصائيات عامة
