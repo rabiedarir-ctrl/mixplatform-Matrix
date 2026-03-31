@@ -1,6 +1,6 @@
 // config/manager.api.js
 
-const MANAGER_API_BASE = "https://api.mix-rd.com/manager";
+const MANAGER_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/manager";
 
 /**
  * تنفيذ طلب API لمدير الأعمال
