@@ -1,6 +1,6 @@
-/* 📂 pages/bitcoin.css */
+/* pages/bitcoin.css */
 
-/* 🧱 الحاوية الرئيسية */
+/* الحاوية الرئيسية */
 .bitcoin-container {
   padding: 25px;
   max-width: 750px;
@@ -12,7 +12,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* 🏷️ عنوان الصفحة */
+/* عنوان الصفحة */
 .bitcoin-container h2 {
   text-align: center;
   margin-bottom: 25px;
@@ -21,7 +21,7 @@
   text-shadow: 0 0 8px #f7931a;
 }
 
-/* 📊 الرصيد */
+/* الرصيد */
 .btc-balance, .btc-transaction, .btc-history {
   margin-bottom: 20px;
 }
@@ -41,7 +41,7 @@
   text-shadow: 0 0 6px #f7931a;
 }
 
-/* 🔄 إرسال واستقبال البيتكوين */
+/* إرسال واستقبال البيتكوين */
 .btc-transaction input {
   width: calc(50% - 10px);
   padding: 12px 10px;
@@ -74,7 +74,7 @@
   transform: translateY(-2px);
 }
 
-/* 📝 سجل المعاملات */
+/* سجل المعاملات */
 .btc-transaction-item {
   background: #1a1a1a;
   padding: 12px;
@@ -99,7 +99,7 @@
   font-size: 12px;
 }
 
-/* 📱 Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .btc-transaction input, .btc-transaction button {
     width: 100%;
