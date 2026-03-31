@@ -1,6 +1,6 @@
-/* 📂 pages/manager.css */
+/* pages/manager.css */
 
-/* 🧱 الحاوية الرئيسية */
+/* الحاوية الرئيسية */
 .manager-container {
   padding: 25px;
   max-width: 1000px;
@@ -12,7 +12,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* 🏷️ عنوان الصفحة */
+/* عنوان الصفحة */
 .manager-container h2 {
   text-align: center;
   margin-bottom: 25px;
@@ -52,7 +52,7 @@
   color: #0f0;
 }
 
-/* 🧑‍💼 المستخدمون */
+/* المستخدمون */
 .users-container, .transactions-container {
   margin-bottom: 20px;
 }
@@ -88,7 +88,7 @@
   font-size: 12px;
 }
 
-/* 🔍 أزرار التفاعل المحتملة */
+/* أزرار التفاعل المحتملة */
 .user-item button, .transaction-item button {
   margin-top: 5px;
   padding: 5px 10px;
@@ -106,7 +106,7 @@
   transform: translateY(-2px);
 }
 
-/* 📱 Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .stats-container {
     flex-direction: column;
