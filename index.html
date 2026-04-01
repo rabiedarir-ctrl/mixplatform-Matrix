@@ -3,62 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منصة ميكس | وقت تشغيل رقمي موحد</title>
-  <head>
-  <body>
 
-<header>
-  <h1>منصة ميكس</h1>
-  <p>وقت التشغيل الرقمي الموحد</p>
+  <title>Mix Platform | نظام تشغيل رقمي</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="static/style.css">
+
+  <!-- تحسين الأداء -->
+  <meta name="description" content="Mix Platform - نظام تشغيل رقمي موحد">
+</head>
+
+<body>
+
+<!-- Header -->
+<header class="main-header">
+  <h1>Mix Platform</h1>
+  <p>نظام التشغيل الرقمي الموحد</p>
 </header>
 
-<nav>
-  <a href="#social">اجتماعي</a> |
-  <a href="#store">متجر</a> |
-  <a href="#wallet">محفظة</a> |
-  <a href="#games">ألعاب</a> |
-  <a href="#metaverse">Metaverse</a> |
-  <a href="#matrix">المصفوفة</a>
+<!-- Navigation -->
+<nav class="main-nav">
+  <a href="#home">الرئيسية</a>
+  <a href="#dashboard">Dashboard</a>
+  <a href="#wallet">Wallet</a>
+  <a href="#gps">GPS</a>
+  <a href="#metaverse">Metaverse</a>
+  <a href="#matrix">Matrix</a>
+  <a href="#media">Media</a>
+  <a href="#manager">Manager</a>
 </nav>
 
+<!-- التطبيق الرئيسي -->
 <main>
-
-<section id="social">
-  <h2>موجزات التواصل الاجتماعي</h2>
-  <div id="social-feed">جارٍ التحميل...</div>
-</section>
-
-<section id="store">
-  <h2>متجر</h2>
-  <div id="store-items">جارٍ التحميل...</div>
-</section>
-
-<section id="wallet">
-  <h2>محفظة</h2>
-  <div id="wallet-info">جارٍ التحميل...</div>
-</section>
-
-<section id="games">
-  <h2>ألعاب</h2>
-  <div id="games-list">جارٍ التحميل...</div>
-</section>
-
-<section id="metaverse">
-  <h2>الميتافيرس</h2>
-  <div id="metaverse-world">جارٍ التحميل...</div>
-</section>
-
-<section id="matrix">
-  <h2>دردشة المصفوفة</h2>
-  <div id="matrix-chat">جارٍ التحميل...</div>
-</section>
-
+  <div id="app">
+    <div class="loading-screen">
+      <p>جاري تحميل Mix Platform...</p>
+    </div>
+  </div>
 </main>
-<footer>
-  <p>© منصة ميكس 2026</p>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <p>© 2026 Mix Platform</p>
 </footer>
 
-<script src="static/main.js"></script>
+<!-- تسجيل Service Worker -->
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(() => console.log("Service Worker Registered"))
+      .catch(err => console.error("SW Error:", err));
+  }
+</script>
+
+<!-- التطبيق الرئيسي (SPA Controller) -->
+<script type="module" src="static/main.js"></script>
 
 </body>
-  
+</html>
