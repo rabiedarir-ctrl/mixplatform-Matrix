@@ -5,6 +5,11 @@ link.rel = "stylesheet";
 link.href = "./pages/gps.css";
 document.head.appendChild(link);
 
+import { saveLocation, liveTracking, getLastLocation, getHistory } from "../config/gps.endpoint.js";
+
+// مثال: إرسال الموقع في Live Tracking
+await liveTracking({ latitude: 33.5883, longitude: -7.6114, accuracy: 5 });
+
 import { apiFetch } from "../config/api.js";
 
 let watchId = null;
