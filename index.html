@@ -3,65 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Mix Platform | نظام تشغيل رقمي</title>
 
-  <!-- PWA -->
+  <!-- 📱 PWA -->
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#000000">
 
-  <!-- CSS -->
+  <!-- 🎨 CSS -->
   <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="../pages/dashboard.css">
+  <link rel="stylesheet" href="../pages/home.css">
+  <link rel="stylesheet" href="../pages/metaverse.css">
+  <link rel="stylesheet" href="../pages/media.css">
+  <link rel="stylesheet" href="../pages/manager.css">
+  <link rel="stylesheet" href="../pages/bitcoin.css">
+  <link rel="stylesheet" href="../pages/gps.css">
+  <link rel="stylesheet" href="../pages/matrix.css">
 
-  <!-- تحسين الأداء -->
-  <meta name="description" content="Mix Platform - نظام تشغيل رقمي موحد">
+  <!-- 🧠 Meta -->
+  <meta name="theme-color" content="#0f0">
 </head>
 
 <body>
 
-<!-- Header -->
+<!-- 🧠 Header -->
 <header class="main-header">
   <h1>Mix Platform</h1>
-  <p>نظام التشغيل الرقمي الموحد</p>
+  <p>نظام تشغيل رقمي موحد</p>
 </header>
 
-<!-- Navigation -->
+<!-- 🧭 Navigation -->
 <nav class="main-nav">
-  <a href="#home">الرئيسية</a>
-  <a href="#dashboard">Dashboard</a>
-  <a href="#wallet">Wallet</a>
-  <a href="#gps">GPS</a>
-  <a href="#metaverse">Metaverse</a>
-  <a href="#matrix">Matrix</a>
-  <a href="#media">Media</a>
-  <a href="#manager">Manager</a>
+  <a href="#home">🏠 الرئيسية</a>
+  <a href="#dashboard">📊 Dashboard</a>
+  <a href="#media">🎬 Media</a>
+  <a href="#metaverse">🌐 Metaverse</a>
+  <a href="#matrix">🧠 Matrix</a>
+  <a href="#gps">📡 GPS</a>
+  <a href="#wallet">💰 Wallet</a>
+  <a href="#bitcoin">₿ Bitcoin</a>
+  <a href="#manager">🧑‍💼 Manager</a>
 </nav>
 
-<!-- التطبيق الرئيسي -->
-<main>
-  <div id="app">
-    <div class="loading-screen">
-      <p>جاري تحميل Mix Platform...</p>
-    </div>
+<!-- 🚀 الحاوية الرئيسية (قلب النظام) -->
+<main id="app">
+  <div class="loading">
+    ⏳ جاري تشغيل منصة Mix...
   </div>
 </main>
 
-<!-- Footer -->
-<footer class="main-footer">
-  <p>© 2026 Mix Platform</p>
-</footer>
+<!-- 📶 حالة الاتصال -->
+<div id="status-bar">
+  <span id="status-text">🟢 متصل</span>
+</div>
 
-<!-- تسجيل Service Worker -->
+<!-- ⚡ Service Worker -->
 <script>
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("./service-worker.js")
+    navigator.serviceWorker.register("service-worker.js")
       .then(() => console.log("Service Worker Registered"))
       .catch(err => console.error("SW Error:", err));
   }
 </script>
 
-<!-- التطبيق الرئيسي (SPA Controller) -->
+<!-- 🚀 تشغيل التطبيق -->
 <script type="module" src="static/main.js"></script>
 
 </body>
-</html>
+                    </html>
