@@ -1,5 +1,14 @@
 // pages/social.js
 
+
+const link = document.createElement("link");
+link.rel = "stylesheet";
+link.href = "./pages/social.css";
+document.head.appendChild(link);
+
+
+import { apiFetch } from "../config/api.js";
+
 export function loadSocial(app) {
     app.innerHTML = `
         <section id="social">
