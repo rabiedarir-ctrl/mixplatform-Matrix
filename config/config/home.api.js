@@ -1,6 +1,6 @@
 // config/home.api.js
 
-const HOME_API_BASE = "http://localhost:3000";
+const HOME_API_BASE = "http://localhost:3000/api/home";
 
 /**
  * تنفيذ طلب API للصفحة الرئيسية
