@@ -1,7 +1,7 @@
 // config/matrix.api.js
 // Mix Platform - Dream Matrix API
 
-const MATRIX_API_BASE = "http://localhost:3000";
+const MATRIX_API_BASE = "http://localhost:3000/api/matrix";
 
 /**
  * دالة عامة للتعامل مع Matrix API
