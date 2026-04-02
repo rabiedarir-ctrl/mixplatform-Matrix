@@ -1,6 +1,6 @@
 // config/gps.api.js
 
-const GPS_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/gps";
+const GPS_API_BASE = "http://localhost:3000";
 
 /**
  * دالة عامة للتعامل مع GPS API
