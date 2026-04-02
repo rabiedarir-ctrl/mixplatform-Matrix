@@ -1,6 +1,6 @@
 // config/metaverse.api.js
 
-const METAVERSE_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/metaverse";
+const METAVERSE_API_BASE = "http://localhost:3000";
 
 // دالة عامة للتعامل مع API
 async function metaverseFetch(endpoint, options = {}) {
