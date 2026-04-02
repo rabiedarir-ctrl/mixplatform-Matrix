@@ -7,6 +7,9 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
+const routes = require('./routes'); // ملف routes.js
+app.use('/api', routes);
+
 //  Constants & Paths
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
