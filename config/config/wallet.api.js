@@ -1,6 +1,6 @@
 // config/wallet.api.js
 
-const WALLET_API_BASE = "https://api.mix-rd.com/wallet";
+const WALLET_API_BASE = "https://http://localhost:3000/api/wallet";
 
 /**
  * تنفيذ طلب API لمحفظة Mix Platform
