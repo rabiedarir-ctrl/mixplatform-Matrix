@@ -1,6 +1,6 @@
 // config/dashboard.api.js
 
-const API_BASE = "http://localhost:3000"; // غيّر الرابط حسب إعداداتك
+const API_BASE = "http://localhost:3000/api/dashboard"; // غيّر الرابط حسب إعداداتك
 
 /**
  * دالة fetch عامة للتواصل مع API
