@@ -1,6 +1,6 @@
 // config/home.api.js
 
-const HOME_API_BASE = "https://api.mix-rd.com/home";
+const HOME_API_BASE = "http://localhost:3000";
 
 /**
  * تنفيذ طلب API للصفحة الرئيسية
