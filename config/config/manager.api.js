@@ -1,6 +1,6 @@
 // config/manager.api.js
 
-const MANAGER_API_BASE = "http://localhost:3000";
+const MANAGER_API_BASE = "http://localhost:3000/api/manager";
 
 /**
  * تنفيذ طلب API لمدير الأعمال
