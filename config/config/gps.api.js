@@ -1,6 +1,6 @@
 // config/gps.api.js
 
-const GPS_API_BASE = "http://localhost:3000";
+const GPS_API_BASE = "http://localhost:3000/api/gps";
 
 /**
  * دالة عامة للتعامل مع GPS API
