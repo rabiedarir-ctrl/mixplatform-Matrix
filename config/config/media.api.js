@@ -1,6 +1,6 @@
 // config/media.api.js
 
-const MEDIA_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/media";
+const MEDIA_API_BASE = "http://localhost:3000";
 
 /**
  * تنفيذ طلب API للوسائط
