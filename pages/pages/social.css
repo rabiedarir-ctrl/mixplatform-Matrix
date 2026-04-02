@@ -1,0 +1,149 @@
+/* pages/social.css
+
+/* ===== الصفحة ===== */
+#social {
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+/* ===== العنوان ===== */
+#social h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+    font-size: 28px;
+}
+
+/* ===== حسابات المستخدمين ===== */
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.user-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.user-profile span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* ===== التعليقات ===== */
+.comment {
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ===== رفع الصور ===== */
+#upload-section {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#upload-section input[type="file"] {
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#upload-section button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#upload-section button:hover {
+    background-color: #0056b3;
+}
+
+/* ===== بث مباشر ===== */
+#live-stream {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#live-stream video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== دمج AI ===== */
+#ai-section {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#ai-section input[type="text"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 14px;
+}
+
+#ai-section button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#ai-section button:hover {
+    background-color: #218838;
+}
+
+.ai-response {
+    background-color: #eef3ff;
+    padding: 10px;
+    border-radius: 6px;
+    font-style: italic;
+    font-size: 14px;
+    color: #333;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .user-profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #live-stream video {
+        width: 100%;
+    }
+
+    #upload-section button, #ai-section button {
+        width: 100%;
+    }
+}
