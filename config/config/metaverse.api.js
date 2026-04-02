@@ -1,6 +1,6 @@
 // config/metaverse.api.js
 
-const METAVERSE_API_BASE = "http://localhost:3000";
+const METAVERSE_API_BASE = "http://localhost:3000/api/metaverse";
 
 // دالة عامة للتعامل مع API
 async function metaverseFetch(endpoint, options = {}) {
