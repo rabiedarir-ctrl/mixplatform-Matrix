@@ -1,6 +1,6 @@
 // config/bitcoin.api.js
 
-const BITCOIN_API_BASE = "http://localhost:3000";
+const BITCOIN_API_BASE = "http://localhost:3000/api/bitcoin";
 
 /**
  * تنفيذ طلب API للبيتكوين
