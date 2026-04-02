@@ -1,7 +1,7 @@
 // config/matrix.api.js
 // Mix Platform - Dream Matrix API
 
-const MATRIX_API_BASE = "https://api.mix-rd.com/matrix";
+const MATRIX_API_BASE = "https://https://rabiedarir-ctrl.github.io/mixplatform-Matrix/matrix";
 
 /**
  * دالة عامة للتعامل مع Matrix API
