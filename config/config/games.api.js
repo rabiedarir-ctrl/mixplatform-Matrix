@@ -6,7 +6,7 @@
  * بما فيها لعبة Bitcoin وأي ألعاب مستقبلية
  */
 
-const BASE_API_URL = "/api/games"; // المسار الأساسي للـ Backend
+const BASE_API_URL = "http://localhost:3000/api/games"; // المسار الأساسي للـ Backend
 
 // ===== تعريف endpoints للألعاب =====
 const gamesAPI = {
