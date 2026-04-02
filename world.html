@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix Platform | Metaverse</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#007bff">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="static/style.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="pages/metaverse.css">
+    <link rel="stylesheet" href="pages/dashboard.css">
+    <link rel="stylesheet" href="pages/home.css">
+    <link rel="stylesheet" href="pages/media.css">
+    <link rel="stylesheet" href="pages/manager.css">
+    <link rel="stylesheet" href="pages/bitcoin.css">
+    <link rel="stylesheet" href="pages/gps.css">
+    <link rel="stylesheet" href="pages/matrix.css">
+    <link rel="stylesheet" href="pages/social.css">
+    <link rel="stylesheet" href="pages/games.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Metaverse - Mix Platform</h1>
+        <p>تجربة عالم افتراضي ثلاثي الأبعاد</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html#home">الرئيسية</a> |
+        <a href="index.html#social">اجتماعي</a> |
+        <a href="index.html#store">متجر</a> |
+        <a href="index.html#wallet">محفظة</a> |
+        <a href="index.html#games">ألعاب</a> |
+        <a href="index.html#matrix">المصفوفة</a> |
+        <a href="world.html">Metaverse</a>
+    </nav>
+
+    <!-- Main Metaverse Container -->
+    <main>
+        <section id="metaverse-world">
+            <h2>عالم Metaverse</h2>
+            <div id="metaverse-canvas">
+                <!-- هنا سيتم تحميل عناصر Metaverse الديناميكية -->
+                <p>جارٍ تحميل العالم الافتراضي...</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© Mix Platform 2026</p>
+    </footer>
+
+    <!-- Main JS -->
+    <script type="module" src="static/main.js"></script>
+
+    <!-- Load Metaverse Module -->
+    <script type="module">
+        import { loadMetaverse } from "./pages/metaverse.js";
+        const container = document.getElementById("metaverse-canvas");
+        loadMetaverse(container);
+    </script>
+
+    <!-- Register Service Worker for PWA -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                .then(reg => console.log('Service Worker Registered', reg))
+                .catch(err => console.error('Service Worker Registration Failed', err));
+            });
+        }
+    </script>
+</body>
+</html>
