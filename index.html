@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mix Platform</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة ميكس | وقت تشغيل رقمي موحد</title>
 
-  <!-- 📱 PWA -->
-  <link rel="manifest" href="manifest.json">
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
 
-  <!-- 🎨 CSS -->
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#007bff">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="static/style.css">
+
+    <!-- Page CSS --> 
   <link rel="stylesheet" href="static/style.css">
   <link rel="stylesheet" href="../pages/dashboard.css">
   <link rel="stylesheet" href="../pages/home.css">
@@ -21,21 +27,18 @@
   <link rel="stylesheet" href="pages/social.css">
   <link rel="stylesheet" href="pages/games.css">
   <link rel="stylesheet" href="pages/settings.css">
-  
-  <!-- 🧠 Meta -->
-  <meta name="theme-color" content="#0f0">
 </head>
 
 <body>
+    <!-- Header -->
+    <header>
+        <h1>منصة ميكس</h1>
+        <p>وقت التشغيل الرقمي الموحد</p>
+    </header>
 
-<!-- 🧠 Header -->
-<header class="main-header">
-  <h1>Mix Platform</h1>
-  <p>نظام تشغيل رقمي موحد</p>
-</header>
-
-<!-- 🧭 Navigation -->
-<nav class="main-nav">
+    <!-- Navigation -->
+    <nav>
+        
   <a href="#home">🏠 الرئيسية</a>
   <a href="#dashboard">📊 Dashboard</a>
   <a href="#media">🎬 Media</a>
@@ -48,31 +51,94 @@
   <a href="#social"> 📝 social</a>
   <a href="#games"> 🎮 games</a>
   <a href="#settings"> 🔧 settings</a>
-</nav>
+    </nav>
 
-<!-- 🚀 الحاوية الرئيسية (قلب النظام) -->
-<main id="app">
-  <div class="loading">
-  
-  </div>
-</main>
+    <!-- Main App Container -->
+    <main>
+        <!-- App Loader -->
+        <div id="app"></div>
 
-<!-- 📶 حالة الاتصال -->
-<div id="status-bar">
-  <span id="status-text">🟢 متصل</span>
-</div>
+        <!-- Individual Sections (Backup Display) -->
+        <section id="social">
+            <h2>موجزات التواصل الاجتماعي</h2>
+            <div id="social-feed"></div>
+        </section>
 
-<!-- ⚡ Service Worker -->
-<script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js")
-      .then(() => console.log("Service Worker Registered"))
-      .catch(err => console.error("SW Error:", err));
-  }
-</script>
+        <section id="store">
+            <h2>متجر</h2>
+            <div id="store-items"></div>
+        </section>
 
-<!-- 🚀 تشغيل التطبيق -->
-<script type="module" src="static/main.js"></script>
+        <section id="wallet">
+            <h2>محفظة</h2>
+            <div id="wallet-info"></div>
+        </section>
 
+        <section id="games">
+            <h2>الألعاب</h2>
+            <div id="games-list"></div>
+        </section>
+
+        <section id="metaverse">
+            <h2>الميتافيرس</h2>
+            <div id="metaverse-world"></div>
+        </section>
+
+        <section id="matrix">
+            <h2>الاحلام المصفوفة</h2>
+            <div id="matrix-Dream"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© منصة ميكس 2026</p>
+    </footer>
+
+    <!-- Main JS -->
+    <script type="module" src="static/main.js"></script>
+
+    <!-- Load Page Modules -->
+    <script type="module">
+        import { loadBitcoin } from "./pages/bitcoin.js";
+        import { loadManager } from "./pages/manager.js";
+        import { loadWallet } from "./pages/wallet.js";
+        import { loadMedia } from "./pages/media.js";
+        import { loadHome } from "./pages/home.js";
+        import { loadMetaverse } from "./pages/metaverse.js";
+        import { loadDashboard } from "./pages/dashboard.js";
+        import { loadSocial } from "./pages/social.js";
+        import { loadGames } from "./pages/games.js";
+        import { loadGPS } from "./pages/gps.js";
+        import { loadMatrix } from "./pages/matrix.js";
+        import { loadMatrix } from "./pages/settings.js";
+      
+      
+        const app = document.getElementById("app");
+
+        // Load All Modules
+        loadHome(app);
+        loadDashboard(app);
+        loadSocial(app);
+        loadGames(app);
+        loadMetaverse(app);
+        loadMatrix(app);
+        loadWallet(app);
+        loadMedia(app);
+        loadManager(app);
+        loadBitcoin(app);
+        loadGPS(app);
+    </script>
+
+    <!-- Register Service Worker for PWA -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                .then(reg => console.log('Service Worker Registered', reg))
+                .catch(err => console.error('Service Worker Registration Failed', err));
+            });
+        }
+    </script>
 </body>
-                    </html>
+</html>
