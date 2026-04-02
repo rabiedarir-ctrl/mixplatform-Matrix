@@ -1,6 +1,6 @@
 // config/media.api.js
 
-const MEDIA_API_BASE = "http://localhost:3000";
+const MEDIA_API_BASE = "http://localhost:3000/api/media";
 
 /**
  * تنفيذ طلب API للوسائط
