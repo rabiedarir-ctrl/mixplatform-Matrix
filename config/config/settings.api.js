@@ -5,7 +5,7 @@
  * إدارة جميع إعدادات المنصة (Frontend ↔ Backend ↔ Config)
  */
 
-const BASE_URL = "/api/settings";
+const BASE_URL = "http://localhost:3000/api/settings";
 
 // ===== Endpoints =====
 const settingsAPI = {
