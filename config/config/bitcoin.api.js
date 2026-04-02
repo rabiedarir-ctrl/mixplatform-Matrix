@@ -1,6 +1,6 @@
 // config/bitcoin.api.js
 
-const BITCOIN_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/bitcoin";
+const BITCOIN_API_BASE = "http://localhost:3000";
 
 /**
  * تنفيذ طلب API للبيتكوين
