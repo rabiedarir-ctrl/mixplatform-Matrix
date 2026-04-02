@@ -1,7 +1,7 @@
 // config/matrix.api.js
 // Mix Platform - Dream Matrix API
 
-const MATRIX_API_BASE = "https://https://rabiedarir-ctrl.github.io/mixplatform-Matrix/matrix";
+const MATRIX_API_BASE = "http://localhost:3000";
 
 /**
  * دالة عامة للتعامل مع Matrix API
