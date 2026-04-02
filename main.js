@@ -2,7 +2,7 @@
 
 const app = document.getElementById("app");
 const statusText = document.getElementById("status-text");
-const MIX_API_BASE = ""; // مؤقت
+const MIX_API_BASE = "http://localhost:3000"; // مؤقت
 const ENTRY_CODE = "MIX-001";
 
 // ===== Cache =====
