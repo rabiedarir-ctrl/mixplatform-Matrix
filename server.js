@@ -166,7 +166,7 @@ app.use(limiter);
 app.get('/:path', function(req, res) {
   let path = req.params.path;
   if (isValidPath(path))
-    res.sendFile(path);
+    res.sendFile(_dirname, "../frontend/index.html");
 });
 
 // Error Handling 
