@@ -1,6 +1,6 @@
 // config/dashboard.endpoint.js
 
-const DASHBOARD_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/dashboard";
+const DASHBOARD_API_BASE = "http://localhost:3000/endpoint/dashboard";
 
 /**
  * تنفيذ طلب API للـ Dashboard
