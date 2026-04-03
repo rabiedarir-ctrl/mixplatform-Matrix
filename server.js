@@ -111,30 +111,24 @@ app.get("/api/matrix/messages", getMessages);
 app.post("/api/matrix/send", sendMessage);
 
 // Upload API
-app.post("/upload", (req, res) => {
-    const { filename, content } = req.body;
-    if (!filename || !content) return res.status(400).json({ error: "Missing filename or content" });
-    const uploadRoot = path.join(storageDir, "cache");
-    const candidatePath = path.join(uploadRoot, filename);
+var express = require('express');
+var app = express();
 
-    let filePath;
-    try {
-        // Normalize the path and ensure it stays within the upload root
-        const resolvedPath = path.resolve(candidatePath);
-        const normalizedRoot = path.resolve(uploadRoot) + path.sep;
-        if (!resolvedPath.startsWith(normalizedRoot)) {
-            return res.status(400).json({ error: "Invalid filename" });
-        }
-        filePath = resolvedPath;
-    } catch (e) {
-        return res.status(400).json({ error: "Invalid filename" });
-    }
-
-    fs.writeFile(filePath, content, "base64", (err) => {
-        if (err) return res.status(500).json({ error: "Failed to save file" });
-        res.json({ status: "OK", path: filePath });
-    });
+// set up rate limiter: maximum of five requests per minute
+var RateLimit = require('express-rate-limit');
+var limiter = RateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // max 100 requests per windowMs
 });
+
+// apply rate limiter to all requests
+app.use(limiter);
+
+app.get('/:path', function(req, res) {
+  let path = req.params.path;
+  if (isValidPath(path))
+    res.sendFile(path);
+})
 
 // Health 
 app.get("/health", (req, res) => {
