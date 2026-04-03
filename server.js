@@ -6,6 +6,16 @@ import cors from "cors";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+const rateLimit = require("express-rate-limit");
+
+// Setting selector
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 دقيقة
+  max: 100, // 100 طلب لكل IP
+  message: "Too many requests, please try again later."
+});
+
+  app.use(limiter);
 
 const routes = require('./routes'); // ملف routes.js
 app.use('/api', routes);
