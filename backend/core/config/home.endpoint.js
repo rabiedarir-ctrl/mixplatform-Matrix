@@ -1,6 +1,6 @@
 // config/home.endpoint.js
 
-const HOME_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/home";
+const HOME_API_BASE = "http://localhost:3000/endpoint/home";
 
 /**
  * تنفيذ طلب API للصفحة الرئيسية
