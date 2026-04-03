@@ -11,7 +11,7 @@ const cors = require('cors');
 
 // إعدادات CORS العامة
 const corsOptions = {
-    origin: '*', // يمكن وضع ['https://example.com'] لتقييد الدومينات
+    origin: 'true', // يمكن وضع ['https://example.com'] لتقييد الدومينات
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'X-MIX-CODE', 'Authorization'],
     credentials: true,
