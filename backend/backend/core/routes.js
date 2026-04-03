@@ -96,3 +96,8 @@ router.get('/gps', createGetHandler('gps'));
 router.post('/gps', createPostHandler('gps'));
 
 module.exports = router;
+
+// limiter
+router.get("*", limiter, (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/index.html"));
+});
