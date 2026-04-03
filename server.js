@@ -149,3 +149,6 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
     console.log(`🚀 Mix Platform API & Server running at http://localhost:${PORT}`);
 });
+
+// router
+app.use("/", router);
