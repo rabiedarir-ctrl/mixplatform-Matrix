@@ -1,6 +1,6 @@
 // config/bitcoin.endpoints.js
 
-const BITCOIN_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/bitcoin";
+const BITCOIN_API_BASE = "http://localhost:3000/endpoint/bitcoin";
 
 /**
  * نقاط النهاية الخاصة بالبيتكوين في Mix Platform
