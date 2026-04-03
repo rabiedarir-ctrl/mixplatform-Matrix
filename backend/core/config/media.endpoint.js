@@ -1,6 +1,6 @@
 // config/media.endpoint.js
 
-const MEDIA_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/media";
+const MEDIA_API_BASE = "http://localhost:3000/endpoint/media";
 
 /**
  * تنفيذ طلب API للملفات الإعلامية
