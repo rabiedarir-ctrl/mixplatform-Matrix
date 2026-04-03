@@ -1,6 +1,6 @@
 // config/metaverse.endpoint.js
 
-const METAVERSE_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/metaverse";
+const METAVERSE_API_BASE = "http://localhost:3000/endpoint/metaverse";
 
 /**
  * تنفيذ أي طلب إلى Metaverse API
