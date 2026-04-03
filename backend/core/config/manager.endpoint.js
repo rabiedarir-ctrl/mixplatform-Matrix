@@ -1,6 +1,6 @@
 // config/manager.endpoint.js
 
-const MANAGER_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/manager";
+const MANAGER_API_BASE = "http://localhost:3000/endpoint/manager";
 
 /**
  * تنفيذ طلب API للـ Manager
