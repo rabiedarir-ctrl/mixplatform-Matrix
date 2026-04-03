@@ -114,7 +114,22 @@ app.post("/api/matrix/send", sendMessage);
 app.post("/upload", (req, res) => {
     const { filename, content } = req.body;
     if (!filename || !content) return res.status(400).json({ error: "Missing filename or content" });
-    const filePath = path.join(storageDir, 'cache', filename);
+    const uploadRoot = path.join(storageDir, "cache");
+    const candidatePath = path.join(uploadRoot, filename);
+
+    let filePath;
+    try {
+        // Normalize the path and ensure it stays within the upload root
+        const resolvedPath = path.resolve(candidatePath);
+        const normalizedRoot = path.resolve(uploadRoot) + path.sep;
+        if (!resolvedPath.startsWith(normalizedRoot)) {
+            return res.status(400).json({ error: "Invalid filename" });
+        }
+        filePath = resolvedPath;
+    } catch (e) {
+        return res.status(400).json({ error: "Invalid filename" });
+    }
+
     fs.writeFile(filePath, content, "base64", (err) => {
         if (err) return res.status(500).json({ error: "Failed to save file" });
         res.json({ status: "OK", path: filePath });
