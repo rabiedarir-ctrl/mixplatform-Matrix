@@ -1,6 +1,6 @@
 // config/Wallet.endpoint.js
 
-const WALLET_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/wallet";
+const WALLET_API_BASE = "http://localhost:3000/endpoint/Wallet";
 
 /**
  * تنفيذ طلب API للمحفظة
