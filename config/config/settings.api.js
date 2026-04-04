@@ -1,4 +1,4 @@
-// config/settings.api.js
+// API/config.api/settings.api.js
 
 /**
  * Mix Platform - Settings API Manager
