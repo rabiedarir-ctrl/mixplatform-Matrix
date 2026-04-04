@@ -1,7 +1,7 @@
 //  API/api.js
 
 //  رابط API الأساسي
-export const MIX_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/api.js";
+export const MIX_API_BASE = http://localhost:3000/api/api.js
 
 //  تخزين التوكن
 let AUTH_TOKEN = null;
