@@ -1,4 +1,4 @@
-// config/games.api.js
+// API/config.api/games.api.js
 
 /**
  * Mix Platform - Games API Configuration
