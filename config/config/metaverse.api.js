@@ -1,4 +1,4 @@
-// config/metaverse.api.js
+// API/config.api/metaverse.api.js
 
 const METAVERSE_API_BASE = "http://localhost:3000/api/metaverse";
 
