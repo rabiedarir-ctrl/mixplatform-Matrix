@@ -1,4 +1,4 @@
-// config/social.api.js
+// API/config.api/social.api.js
 
 const express = require('express');
 const router = express.Router();
