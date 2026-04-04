@@ -5,6 +5,7 @@ const statusText = document.getElementById("status-text");
 const MIX_API_BASE = window.location.hostname === "localhost" 
     ? "http://localhost:3000"      // عند التشغيل محليًا
     : "https://your-backend-url.com"; // عند التشغيل على الإنترنت / السيرفر الحقيقي
+    : "https://mix-api.onrender.com"
 const ENTRY_CODE = "MIX-001";
 
 // ===== Cache =====
