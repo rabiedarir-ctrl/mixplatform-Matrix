@@ -1,1 +1,26 @@
-www.mix-rd.org
+Type: CNAME
+Name: www
+Value: www.mix-rd.org
+
+# تشغيل PWA
+
+{
+  "name": "Mix Platform",
+  "short_name": "Mix",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ff0000",
+  "icons": [
+    { "src": "icon.png", "sizes": "192x192", "type": "image/png" }
+  ]
+}
+
+# Records DNS
+
+Type: A
+Name: @
+Value: 185.199.108.153
+Value: 185.199.109.153
+Value: 185.199.110.153
+Value: 185.199.111.153
