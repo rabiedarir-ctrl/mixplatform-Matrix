@@ -1,4 +1,4 @@
-// config/bitcoin.api.js
+// API/bitcoin.api.js
 
 const BITCOIN_API_BASE = "http://localhost:3000/api/bitcoin";
 
