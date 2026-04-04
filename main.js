@@ -2,7 +2,7 @@
 
 const app = document.getElementById("app");
 const statusText = document.getElementById("status-text");
-const MIX_API_BASE = window.location.hostname === "localhost" 
+const MIX_API_BASE = window.location.hostname = "localhost" 
     ? "http://localhost:3000"      // عند التشغيل محليًا
     : "https://your-backend-url.com"; // عند التشغيل على الإنترنت / السيرفر الحقيقي
     : "https://mix-api.onrender.com"
@@ -91,9 +91,9 @@ async function router() {
         module[loaderName](app);
 
         // Call special functions if needed
-        if (hash === "#store" || hash === "#dashboard") {
-            if (hash === "#store") fetchChairs();
-            if (hash === "#dashboard") fetchHealth();
+        if (hash "#store" || hash "#dashboard") {
+            if (hash "#store") fetchChairs();
+            if (hash "#dashboard") fetchHealth();
         }
 
         // Save last page
