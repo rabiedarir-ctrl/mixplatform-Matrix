@@ -1,9 +1,10 @@
+HTML
 <!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mix platform</title>
+    <title>Mix Platform</title>
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
@@ -14,85 +15,71 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="static/style.css">
 
-    <!-- Page CSS --> 
-  <link rel="stylesheet" href="static/style.css">
-  <link rel="stylesheet" href="../pages/dashboard.css">
-  <link rel="stylesheet" href="../pages/home.css">
-  <link rel="stylesheet" href="../pages/metaverse.css">
-  <link rel="stylesheet" href="../pages/media.css">
-  <link rel="stylesheet" href="../pages/manager.css">
-  <link rel="stylesheet" href="../pages/bitcoin.css">
-  <link rel="stylesheet" href="../pages/gps.css">
-  <link rel="stylesheet" href="../pages/matrix.css">
-  <link rel="stylesheet" href="pages/social.css">
-  <link rel="stylesheet" href="pages/games.css">
-  <link rel="stylesheet" href="pages/settings.css">
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="pages/dashboard.css">
+    <link rel="stylesheet" href="pages/home.css">
+    <link rel="stylesheet" href="pages/metaverse.css">
+    <link rel="stylesheet" href="pages/media.css">
+    <link rel="stylesheet" href="pages/manager.css">
+    <link rel="stylesheet" href="pages/bitcoin.css">
+    <link rel="stylesheet" href="pages/gps.css">
+    <link rel="stylesheet" href="pages/matrix.css">
+    <link rel="stylesheet" href="pages/social.css">
+    <link rel="stylesheet" href="pages/games.css">
+    <link rel="stylesheet" href="pages/settings.css">
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <h1>Mix platform</h1>
-        <p></p>
+        <h1>Mix Platform</h1>
+        <p>وقت التشغيل الرقمي الموحد</p>
     </header>
 
     <!-- Navigation -->
-    <nav>
-        
-  <a href="#home">🏠 Home</a>
-  <a href="#dashboard">📊 Dashboard</a>
-  <a href="#media">🎬 Media</a>
-  <a href="#metaverse">🌐 Metaverse</a>
-  <a href="#matrix">🧠 Matrix</a>
-  <a href="#gps">📡 GPS</a>
-  <a href="#wallet">💰 Wallet</a>
-  <a href="#bitcoin">₿ Bitcoin</a>
-  <a href="#manager">🧑‍💼 Manager</a>
-  <a href="#social"> 📝 social</a>
-  <a href="#games"> 🎮 games</a>
-  <a href="#settings"> 🔧 settings</a>
+    <nav id="main-nav">
+        <!-- سيتم تعبئته بواسطة JS ديناميكي -->
     </nav>
 
     <!-- Main App Container -->
     <main>
-        <!-- App Loader -->
-        <div id="app"></div>
+        <div id="app">جارٍ تحميل التطبيق...</div>
 
-        <!-- Individual Sections (Backup Display) -->
+        <!-- Individual Sections (Backup) -->
         <section id="social">
-            <h2></h2>
+            <h2>Social</h2>
             <div id="social-feed"></div>
         </section>
 
         <section id="store">
-            <h2></h2>
+            <h2>Store</h2>
             <div id="store-items"></div>
         </section>
 
         <section id="wallet">
-            <h2></h2>
+            <h2>Wallet</h2>
             <div id="wallet-info"></div>
         </section>
 
         <section id="games">
-            <h2></h2>
+            <h2>Games</h2>
             <div id="games-list"></div>
         </section>
 
         <section id="metaverse">
-            <h2></h2>
+            <h2>Metaverse</h2>
             <div id="metaverse-world"></div>
         </section>
 
         <section id="matrix">
-            <h2></h2>
-            <div id="matrix-Dream"></div>
+            <h2>Matrix Chat</h2>
+            <div id="matrix-chat"></div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>Mix platform 2026 ©</p>
+        <p>Mix Platform 2026 ©</p>
     </footer>
 
     <!-- Main JS -->
@@ -112,27 +99,43 @@
         import { loadGPS } from "./pages/gps.js";
         import { loadMatrix } from "./pages/matrix.js";
         import { loadSettings } from "./pages/settings.js";
-      
-      
-        const app = document.getElementById("app");
 
-        // Load All Modules
+        const app = document.getElementById("app");
+        const nav = document.getElementById("main-nav");
+
+        // Menu Items ديناميكي
+        const menuItems = [
+            { name: "🏠 Home", action: () => loadHome(app) },
+            { name: "📊 Dashboard", action: () => loadDashboard(app) },
+            { name: "🎬 Media", action: () => loadMedia(app) },
+            { name: "🌐 Metaverse", action: () => loadMetaverse(app) },
+            { name: "🧠 Matrix", action: () => loadMatrix(app) },
+            { name: "📡 GPS", action: () => loadGPS(app) },
+            { name: "💰 Wallet", action: () => loadWallet(app) },
+            { name: "₿ Bitcoin", action: () => loadBitcoin(app) },
+            { name: "🧑‍💼 Manager", action: () => loadManager(app) },
+            { name: "📝 Social", action: () => loadSocial(app) },
+            { name: "🎮 Games", action: () => loadGames(app) },
+            { name: "🔧 Settings", action: () => loadSettings(app) }
+        ];
+
+        // Generate Navigation
+        nav.innerHTML = menuItems.map(item => `<a href="#">${item.name}</a>`).join(" | ");
+
+        // Add click events
+        const links = nav.querySelectorAll("a");
+        links.forEach((link, idx) => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                menuItems[idx].action();
+            });
+        });
+
+        // Load Home by default
         loadHome(app);
-        loadDashboard(app);
-        loadSocial(app);
-        loadGames(app);
-        loadMetaverse(app);
-        loadMatrix(app);
-        loadWallet(app);
-        loadMedia(app);
-        loadManager(app);
-        loadBitcoin(app);
-        loadGPS(app);
-        loadSettings(app);
-   
     </script>
 
-    <!-- Register Service Worker for PWA -->
+    <!-- Service Worker -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
@@ -143,4 +146,4 @@
         }
     </script>
 </body>
-</html>
+        </html>
