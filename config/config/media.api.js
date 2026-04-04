@@ -1,4 +1,4 @@
-// config/media.api.js
+// API/config.api/media.api.js
 
 const MEDIA_API_BASE = "http://localhost:3000/api/media";
 
