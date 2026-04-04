@@ -129,10 +129,43 @@
         loadBitcoin(app);
         loadGPS(app);
         loadSettings(app);
-   
+
+       const nav = document.getElementById("main-nav");
+
+        
+        // Menu Items ديناميكي
+        const menuItems = [
+            { name: "🏠 Home", action: () => loadHome(app) },
+            { name: "📊 Dashboard", action: () => loadDashboard(app) },
+            { name: "🎬 Media", action: () => loadMedia(app) },
+            { name: "🌐 Metaverse", action: () => loadMetaverse(app) },
+            { name: "🧠 Matrix", action: () => loadMatrix(app) },
+            { name: "📡 GPS", action: () => loadGPS(app) },
+            { name: "💰 Wallet", action: () => loadWallet(app) },
+            { name: "₿ Bitcoin", action: () => loadBitcoin(app) },
+            { name: "🧑‍💼 Manager", action: () => loadManager(app) },
+            { name: "📝 Social", action: () => loadSocial(app) },
+            { name: "🎮 Games", action: () => loadGames(app) },
+            { name: "🔧 Settings", action: () => loadSettings(app) }
+            ];
+        
+        // Generate Navigation
+        nav.innerHTML = menuItems.map(item => `<a href="#">${item.name}</a>`).join(" | ");
+
+        // Add click events
+        const links = nav.querySelectorAll("a");
+        links.forEach((link, idx) => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                menuItems[idx].action();
+            });
+        });
+
+        // Load Home by default
+        loadHome(app);
     </script>
 
-    <!-- Register Service Worker for PWA -->
+    <!-- Service Worker -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
