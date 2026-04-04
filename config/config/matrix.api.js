@@ -1,4 +1,5 @@
-// config/matrix.api.js
+// API/config.api/matrix.api.js
+
 // Mix Platform - Dream Matrix API
 
 const MATRIX_API_BASE = "http://localhost:3000/api/matrix";
