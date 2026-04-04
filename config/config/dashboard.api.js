@@ -1,4 +1,4 @@
-// config/dashboard.api.js
+// API/config.api/dashboard.api.js
 
 const API_BASE = "http://localhost:3000/api/dashboard"; // غيّر الرابط حسب إعداداتك
 
