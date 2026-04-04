@@ -1,4 +1,4 @@
-// config/home.api.js
+// API/config.api/home.api.js
 
 const HOME_API_BASE = "http://localhost:3000/api/home";
 
