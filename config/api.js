@@ -1,4 +1,4 @@
-//  config/api.js
+//  API/api.js
 
 //  رابط API الأساسي
 export const MIX_API_BASE = "https://rabiedarir-ctrl.github.io/mixplatform-Matrix/api.js";
