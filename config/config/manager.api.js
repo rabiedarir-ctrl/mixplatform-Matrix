@@ -1,4 +1,4 @@
-// config/manager.api.js
+// API/config.api/manager.api.js
 
 const MANAGER_API_BASE = "http://localhost:3000/api/manager";
 
