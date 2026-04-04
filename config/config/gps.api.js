@@ -1,4 +1,4 @@
-// config/gps.api.js
+// API/config.api/gps.api.js
 
 const GPS_API_BASE = "http://localhost:3000/api/gps";
 
