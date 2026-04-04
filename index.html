@@ -111,7 +111,7 @@
         import { loadGames } from "./pages/games.js";
         import { loadGPS } from "./pages/gps.js";
         import { loadMatrix } from "./pages/matrix.js";
-        import { loadMatrix } from "./pages/settings.js";
+        import { loadSettings } from "./pages/settings.js";
       
       
         const app = document.getElementById("app");
@@ -128,6 +128,8 @@
         loadManager(app);
         loadBitcoin(app);
         loadGPS(app);
+        loadSettings(app);
+   
     </script>
 
     <!-- Register Service Worker for PWA -->
