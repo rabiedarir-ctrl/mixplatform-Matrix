@@ -1,4 +1,4 @@
-// config/wallet.api.js
+// API/config.api/wallet.api.js
 
 const WALLET_API_BASE = "https://http://localhost:3000/api/wallet";
 
